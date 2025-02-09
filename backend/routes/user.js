@@ -132,7 +132,7 @@ userRouter.get("/bulk",async(req,res) =>{
             }))
         })
     } catch(err) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching users:", err);
         res.status(500).json({ msg: "Internal server error" });
     }
     
