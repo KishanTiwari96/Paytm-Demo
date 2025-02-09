@@ -107,7 +107,7 @@ userRouter.put("/update", authentication, async(req,res) => {
 
 })
 
-userRouter.get("/bulk", authentication,async(req,res) =>{
+userRouter.get("/bulk",async(req,res) =>{
     const filter = req.query.filter || "";
     
     try{
