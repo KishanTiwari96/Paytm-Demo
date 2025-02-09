@@ -5,24 +5,19 @@ import { useNavigate } from "react-router-dom";
 export function Users(){
     const [user,setUser] = useState([]);
     const [input,setInput] = useState("");
-    const token = localStorage.getItem("token");
 
     useEffect(()=>{
         window.history.pushState(null, "", window.location.href);
         window.onpopstate = () => {
             window.history.pushState(null, "", window.location.href);
         };
-        axios.get("https://paytm-demo-backend.vercel.app/api/v1/user/bulk?filter=" + input,{
-            headers : {
-                Authorization : "Bearer " + token
-            }
-        })
+        axios.get("https://paytm-demo-backend.vercel.app/api/v1/user/bulk?filter=" + input)
             .then((res)=>{
                 setUser(res.data.users);
             }).catch(err=>{
                 console.error("Error fetching users:", err);
             })
-    },[input,token])
+    },[input])
     return(
         <div>
             <div className="pl-3 font-bold">

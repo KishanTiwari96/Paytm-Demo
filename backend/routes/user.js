@@ -109,16 +109,9 @@ userRouter.put("/update", authentication, async(req,res) => {
 
 userRouter.get("/bulk", authentication,async(req,res) =>{
     const filter = req.query.filter || "";
-    const userId = req.userId;
-    console.log(userId)
-
-    if (!token) {
-        return res.status(401).json({ msg: "No token provided" });
-    }
     
     try{
         const user = await User.find({
-            _id : {$ne:userId},
             $or : [{  // to do two queries at same time (from both first and last name)
                 firstName : {
                     "$regex" : filter   // to match the substring
