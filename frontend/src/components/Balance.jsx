@@ -16,7 +16,7 @@ export function Balance(){
     }
 
     const fetchBalance = ()=>{
-        axios.get("http://localhost:3000/api/v1/account/balance",{
+        axios.get("https://paytm-demo-backend.vercel.app/api/v1/account/balance",{
             headers:{
                 Authorization : "Bearer " + localStorage.getItem("token")
             }

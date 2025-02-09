@@ -12,7 +12,7 @@ export function Users(){
         window.onpopstate = () => {
             window.history.pushState(null, "", window.location.href);
         };
-        axios.get("http://localhost:3000/api/v1/user/bulk?filter=" + input,{
+        axios.get("https://paytm-demo-backend.vercel.app/api/v1/user/bulk?filter=" + input,{
             headers : {
                 Authorization : "Bearer " + token
             }
