@@ -2,7 +2,7 @@ export function Appbar(){
     return(
         <div className="flex justify-between border-b rounded-sm  shadow-sm">
             <div className="m-4">
-                Paytm App
+                Test Wallet
             </div>
             <div className="flex justify-between items-center">
                 <div className="pr-1">
