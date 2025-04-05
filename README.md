@@ -28,12 +28,14 @@ Test-Wallet/ ├── backend/ # Express + Prisma backend ├── frontend/ #
 ```bash
 git clone https://github.com/KishanTiwari96/Test-Wallet.git
 cd Test-Wallet
-🖥️ 2. Frontend Setup
+
+### 🖥️ 2. Frontend Setup
 bash
 cd frontend
 npm install
 npm start
-🛠️ 3. Backend Setup
+
+### 🛠️ 3. Backend Setup
 bash
 cd backend
 npm install
